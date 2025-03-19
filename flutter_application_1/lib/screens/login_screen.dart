@@ -1,6 +1,8 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/choose_language_screen.dart';
+import 'package:flutter_application_1/screens/forgot_password_screen.dart';
 import 'package:flutter_application_1/screens/signup_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 import 'package:flutter_application_1/widgets/custom_text_field.dart';
@@ -157,7 +159,15 @@ class LoginScreen extends StatelessWidget {
                         Align(
                           alignment: Alignment.centerRight,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ForgotPasswordScreen(),
+                                ),
+                              );
+                            },
                             style: TextButton.styleFrom(
                               foregroundColor: AppTheme.primaryColor,
                             ),
@@ -168,7 +178,15 @@ class LoginScreen extends StatelessWidget {
                         GradientButton(
                           text: "Login",
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {}
+                            // if (_formKey.currentState!.validate()) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ChooseLanguageScreen(),
+                                ),
+                              );
+                            // }
                           },
                         ),
                         const SizedBox(height: 24),
