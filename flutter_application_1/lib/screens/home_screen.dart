@@ -338,7 +338,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 160,
                                     decoration: BoxDecoration(
                                       color: AppTheme.primaryColor
-                                          .withOpacity(0.1),
+                                          .withOpacity(0.3),
                                       borderRadius: const BorderRadius.vertical(
                                         top: Radius.circular(16),
                                       ),
