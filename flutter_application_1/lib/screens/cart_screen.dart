@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/checkout_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 import 'package:flutter_application_1/widgets/gradient_button.dart';
 
@@ -175,7 +176,7 @@ class _CartScreenState extends State<CartScreen> {
           Text(
             value,
             style: TextStyle(
-              fontSize: isTotal ? 10 : 14,
+              fontSize: isTotal ? 12 : 14,
               fontWeight: isTotal ? FontWeight.bold : FontWeight.normal,
               color: isTotal ? AppTheme.primaryColor : AppTheme.textPrimary,
             ),
@@ -332,7 +333,14 @@ class _CartScreenState extends State<CartScreen> {
         child: SafeArea(
           child: GradientButton(
             text: "Proceed to Checkout (\$99.99)",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const CheckoutScreen(),
+                ),
+              );
+            },
           ),
         ),
       ),
