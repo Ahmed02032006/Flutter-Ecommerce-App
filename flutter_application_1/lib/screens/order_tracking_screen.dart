@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/main_screen.dart';
+import 'package:flutter_application_1/screens/orders_list_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 import 'package:flutter_application_1/widgets/gradient_button.dart';
 
@@ -234,12 +235,6 @@ class OrderTrackingScreen extends StatelessWidget {
                         isCompleted: true,
                       ),
                       _buildTimeLineItem(
-                        status: "In Transit",
-                        date: "Feb 12, 2025 - 10:30 AM",
-                        description: "Your order is on its way to you",
-                        isCompleted: true,
-                      ),
-                      _buildTimeLineItem(
                         status: "Out for Delivery",
                         date: "Expected Feb 13, 2025",
                         description: "Your order will be delivered today",
@@ -406,7 +401,7 @@ class OrderTrackingScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const OrderTrackingScreen(),
+                        builder: (context) => OrdersListScreen(),
                       ),
                     );
                   },
