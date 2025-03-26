@@ -62,7 +62,7 @@ class OrderTrackingScreen extends StatelessWidget {
                 if (!isLast)
                   Container(
                     width: 2,
-                    height: 30,
+                    height: 50,
                     color: isCompleted
                         ? AppTheme.primaryColor
                         : AppTheme.textSecondary.withOpacity(0.2),
