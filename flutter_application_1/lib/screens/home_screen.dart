@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/product_categories_screen.dart';
 import 'package:flutter_application_1/screens/product_details_screen.dart';
-import 'package:flutter_application_1/screens/search_screen.dart';
+import 'package:flutter_application_1/screens/search_filter_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -133,37 +133,43 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: TextField(
-                            onSubmitted: (value) {
+                    child: Center(
+                      child: TextField(
+                        onSubmitted: (value) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SearchFilterScreen(),
+                            ),
+                          );
+                        },
+                        decoration: InputDecoration(
+                          hintText: 'Search Products ...',
+                          border: InputBorder.none,
+                          hintStyle: const TextStyle(
+                            color: AppTheme.textSecondary,
+                          ),
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            color: AppTheme.textSecondary,
+                          ),
+                          suffixIcon: IconButton(
+                            icon: const Icon(
+                              Icons.tune,
+                            ),
+                            color: AppTheme.primaryColor,
+                            onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const SearchScreen(),
+                                  builder: (context) =>
+                                      const SearchFilterScreen(),
                                 ),
                               );
                             },
-                            decoration: const InputDecoration(
-                              hintText: 'Search Products ...',
-                              border: InputBorder.none,
-                              hintStyle: TextStyle(
-                                color: AppTheme.textSecondary,
-                              ),
-                              prefixIcon: Icon(
-                                Icons.search,
-                                color: AppTheme.textSecondary,
-                              ),
-                              suffixIcon: Icon(
-                                Icons.tune,
-                                color: AppTheme.primaryColor,
-                              ),
-                            ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
