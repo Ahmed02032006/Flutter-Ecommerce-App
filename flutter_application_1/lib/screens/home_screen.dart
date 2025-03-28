@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/product_categories_screen.dart';
+import 'package:flutter_application_1/screens/categories_screen.dart';
 import 'package:flutter_application_1/screens/product_details_screen.dart';
 import 'package:flutter_application_1/screens/search_filter_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) =>
-                                      const ProductCategoriesScreen(),
+                                      const CategoriesScreen(),
                                 ),
                               );
                             },
@@ -284,13 +284,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ProductCategoriesScreen(),
-                                ),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder: (context) =>
+                              //         const ProductCategoriesScreen(),
+                              //   ),
+                              // );
                             },
                             child: const Text(
                               "View All",
@@ -457,13 +457,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               TextButton(
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const ProductCategoriesScreen(),
-                                    ),
-                                  );
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //     builder: (context) =>
+                                  //         const ProductCategoriesScreen(),
+                                  //   ),
+                                  // );
                                 },
                                 child: const Text(
                                   "View All",
