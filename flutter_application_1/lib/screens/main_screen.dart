@@ -3,6 +3,7 @@ import 'package:flutter_application_1/screens/cart_screen.dart';
 import 'package:flutter_application_1/screens/chat_screen.dart';
 import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/profile_screen.dart';
+import 'package:flutter_application_1/screens/wishlist_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
 
 class MainScreen extends StatefulWidget {
@@ -19,6 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const ChatScreen(),
     const CartScreen(),
+    const WishlistScreen(),
     const ProfileScreen(),
   ];
 
@@ -53,7 +55,9 @@ class _MainScreenState extends State<MainScreen> {
                   _buildNavItem(1, Icons.chat_outlined, Icons.chat, 'Chat'),
                   _buildCartNavItem(),
                   _buildNavItem(
-                      3, Icons.person_outlined, Icons.person, 'Profile'),
+                      3, Icons.bookmarks_outlined, Icons.bookmarks, 'Wishlist'),
+                  _buildNavItem(
+                      4, Icons.person_outlined, Icons.person, 'Profile'),
                 ],
               ),
             ),

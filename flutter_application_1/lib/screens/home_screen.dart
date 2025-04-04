@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/categories_screen.dart';
+import 'package:flutter_application_1/screens/notification_screen.dart';
 import 'package:flutter_application_1/screens/product_details_screen.dart';
 import 'package:flutter_application_1/screens/search_filter_screen.dart';
 import 'package:flutter_application_1/theme/theme.dart';
@@ -105,7 +106,14 @@ class _HomeScreenState extends State<HomeScreen> {
             leading: const Text(""),
             actions: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NotificationScreen(),
+                    ),
+                  );
+                },
                 icon: const Icon(
                   Icons.notifications_outlined,
                   color: Colors.white,
