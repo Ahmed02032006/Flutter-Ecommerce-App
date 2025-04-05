@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/cart_screen.dart';
+import 'package:flutter_application_1/screens/chat_listing_screen.dart';
 import 'package:flutter_application_1/screens/chat_screen.dart';
 import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/profile_screen.dart';
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
-    const ChatScreen(),
+    ChatListingScreen(),
     const CartScreen(),
     const WishlistScreen(),
     const ProfileScreen(),
